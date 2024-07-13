@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+
+html , body{
+    height: 100%;
+    width: 100%;
+    font-size: 62.5%;
+    color: #fff;
+    background: #191f36;
+    scroll-behavior: smooth;
+}
+
+section{
+    min-height: 100vh;
+    padding: 8rem 12rem 2rem;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 12rem;
+    background-color: #191f36;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.header #logo{
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 700;
+}
+
+.header .menu{
+    font-size: 3.6rem;
+    color: white;
+    display: none;
+}
+
+.header .navbar a{
+    color: white;
+    font-size: 1.8rem;
+    margin-left: 3.5rem;
+}
+
+.header .navbar a.nav-items:hover{
+    color: #59B2F4;
+}
+
+.navbar a.active{
+    color: #59B2F4
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .home-content h2{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.home .home-content h2:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+
+.home .home-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home .home-content span{
+    color: #59B2F4;
+}
+
+.home .home-content p{
+    font-size: 1.5rem;
+}
+
+.home .social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border: 0.2rem solid #59B2F4;
+    border-radius: 50%;
+    font-size: 2rem;
+    background: transparent;
+    color: #59B2F4;
+    transition: 0.5s;
+    margin: 3rem 1.5rem 1rem 0;
+}
+
+.home .social-media a:hover{
+    color: #262B40;
+    background: #59B2F4;
+    box-shadow: 0 0 1rem #59B2F4;
+} 
+
+.btn{
+    display: inline-block;
+    padding: 1.5rem 3.5rem;
+    background: #59B2F4;
+    border-radius: 4rem;
+    color: #262B40;
+    font-size: 2rem;
+    font-weight: 700;
+    box-shadow: 0 0 1rem #59B2F4;
+    letter-spacing: .1rem;
+    border: none;
+    transition: 0.5s;
+    margin-top: 1.5rem;
+}
+
+.btn:hover{
+    box-shadow: none;
+}
+
+.home-image img{
+    width: 25vw;
+    cursor: pointer;
+    filter: grayscale(100);
+    box-shadow: 0 0 10px gray;
+    transition: .5s;
+}
+
+.home-image img:hover{
+    filter: grayscale(0);
+}
+
+.education h1{
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.education i{
+    margin-right: 1.5rem;
+}
+
+.education .qualification{
+    margin-top: 4rem;
+    position: relative;
+}
+
+.qualification h4{
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding-left: 20px;
+}
+
+.qualification p{
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    padding-left: 20px;
+}
+
+.qualification span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+    padding-right: 10px;
+}
+
+.project h1{
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.project i{
+    margin-right: 1.5rem;
+}
+
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 4.5rem;
+}
+
+.project-container .project-box{
+    position: relative;
+    border-radius: 2rem;
+    display: flex;
+    overflow: hidden;
+}
+
+.project-box img{
+    width: 100%;
+    cursor: pointer;
+    transition: 0.5s ease;
+    opacity: 0.7;
+}
+
+.project-box img:hover{
+    transform: scale(1.1);
+}
+
+.project-box .project-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.1) , #59B2F4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: 0.5s ease;
+}
+
+.project-box:hover .project-content{
+    transform: translateY(0);
+}
+
+.project-content h4{
+    font-size: 3rem;
+}
+
+.project-container p{
+    font-size: 1.5rem;
+    margin: 0.3rem 0 1rem;
+}
+
+
+
+
+
+/* MEDIA QUERY */
+
+@media (max-width : 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width : 991px){
+    .header{
+        padding: 2rem 3%;
+    }
+
+    section{
+        padding: 10rem 3%;
+    }
+
+    .home{
+        padding: 7rem;
+    }
+
+    .education{
+        padding: 7rem;
+    }
+
+    .project{
+        padding: 7rem;
+    }
+
+    .about-us{
+        min-height: auto;
+    }
+}
+
+@media (max-width : 768px){
+    .header .menu{
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background-color: #191f36;
+        border-top: .1rem solid rgba(0, 0, 0, 0.2);
+        box-sizing: 0 0.5rem 1rem rgba(0,0,0,0.2);
+        display: none;
+    }
+
+    .navbar.active{
+        display: block;
+    }
+
+    .home{
+        flex-direction: column;
+    }
+
+    .home-content{
+        order: 2;
+    }
+
+    .home-content h2{
+        font-size: 2.6rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-image img{
+        width: 70vw;
+        margin-top: 4rem;
+        margin-bottom: 5rem;
+    }
+
+    .project-container{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+
+@media (max-width : 617px) {
+    .project-container{
+        grid-template-columns: 1fr;
+    }
+
+    .home-image img{
+        width: 80vw;
+        margin-top: 8rem;
+    }
+}
+
+@media (max-width : 450px){
+    html{
+        font-size: 50%;
+    }
+}
+
+@media (max-width : 360px) {
+    html{
+        font-size: 48%;
+    }
+    
+    section{
+        min-height: auto;
+        margin-top: 2rem;
+    }
+
+    .home{
+        padding: 2rem 7rem 5rem;
+    }
+
+    .education{
+        padding: 2rem 3rem 5rem;
+    }
+
+    .project{
+        padding: 2rem 3rem 5rem;
+    }
+}
