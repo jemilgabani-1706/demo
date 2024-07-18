@@ -262,7 +262,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 3rem;
     gap: 2rem;
 }
 
@@ -381,6 +381,11 @@ section{
         margin-top: 4rem;
         margin-bottom: 5rem;
     }
+
+    .abt{
+        flex-direction: column;
+        margin-top: 0;
+    }
 }
 
 @media (max-width : 617px) {
@@ -397,11 +402,21 @@ section{
         width: 80vw;
         margin-top: 8rem;
     }
+
+    .abt{
+        flex-direction: column;
+        margin-top: 0;
+    }
 }
 
 @media (max-width : 450px){
     html{
         font-size: 50%;
+    }
+
+    .abt{
+        flex-direction: column;
+        margin-top: 0;
     }
 }
 
@@ -437,5 +452,6 @@ section{
 
     .abt{
         flex-direction: column;
+        margin-top: 0;
     }
 }
